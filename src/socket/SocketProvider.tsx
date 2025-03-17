@@ -37,7 +37,7 @@ export const SocketProvider: React.FC<{
 
   useEffect(() => {
     if (token) {
-      const socketInstance = io(`${config?.server}`, {
+      const socketInstance = io(`${config?.server}/control`, {
         auth: { token },
         transports: ["websocket"],
       });
