@@ -109,7 +109,7 @@ export default function ActiveUsers() {
                   <div className="mt-1 text-sm text-gray-500 tracking-wide dark:text-gray-300">
                     Current Credits :{" "}
                     <span className="text-green-500">
-                      {playerData.currentCredits.toFixed(3)}
+                      {playerData.currentCredits?.toFixed(3)}
                     </span>
                   </div>
                   <div className="mt-1 text-sm text-gray-500 tracking-wide dark:text-gray-300">

@@ -46,15 +46,16 @@ export const SocketProvider: React.FC<{
       socketInstance.on("connect", () => {
       });
 
-      socketInstance.on("activePlayers", (activePlayersData) => {
+      socketInstance.on("ALL_PLAYGROUND_PLAYERS", (activePlayersData) => {
+        console.log("ALL_PLAYGROUND_PLAYERS : ", activePlayersData)
         activePlayersData.forEach((player: any) => {
           dispatch(
             addPlayer({
               playerId: player.playerId,
               status: player?.status,
               managerName: player.managerName,
-              initialCredits: player.initialCredits,
-              currentCredits: player.currentCredits,
+              initialCredits: Number(player.initialCredits),
+              currentCredits: Number(player.currentCredits),
               entryTime: new Date(player.entryTime),
               exitTime: player.exitTime ? new Date(player.exitTime) : null,
               currentRTP: player.currentRTP,
@@ -88,6 +89,7 @@ export const SocketProvider: React.FC<{
       };
     }
   }, [token]);
+
   const handlePlatformEvent = (data: any) => {
     switch (data.type) {
       case EventType.ENTERED_PLATFORM:
@@ -102,7 +104,7 @@ export const SocketProvider: React.FC<{
         handleEnteredGame(data.payload);
         break;
 
-      case EventType.UPDATED_SPIN:
+      case EventType.UPDATE_SPIN:
         handleUpdatedSpin(data.payload);
         break;
 
