@@ -8,7 +8,7 @@ import {
   updateSpin,
 } from "@/redux/features/activeUsersSlice";
 import { setUsercredit } from "@/redux/features/userSlice";
-import { CurrentGame, EventType } from "@/utils/Types";
+import { CurrentGame, Events, EventType } from "@/utils/Types";
 import { config } from "@/utils/config";
 import { useAppDispatch } from "@/utils/hooks";
 import { createContext, useContext, useEffect, useState } from "react";
@@ -46,33 +46,63 @@ export const SocketProvider: React.FC<{
       socketInstance.on("connect", () => {
       });
 
-      socketInstance.on("ALL_PLAYGROUND_PLAYERS", (activePlayersData) => {
-        console.log("ALL_PLAYGROUND_PLAYERS : ", activePlayersData)
-        activePlayersData.forEach((player: any) => {
-          dispatch(
-            addPlayer({
-              playerId: player.playerId,
-              status: player?.status,
-              managerName: player.managerName,
-              initialCredits: Number(player.initialCredits),
-              currentCredits: Number(player.currentCredits),
-              entryTime: new Date(player.entryTime),
-              exitTime: player.exitTime ? new Date(player.exitTime) : null,
-              currentRTP: player.currentRTP,
-              currentGame: player.currentGame || {},
-            })
-          );
-        });
-      });
-
-      socketInstance.on("PLATFORM", (data: any) => {
-        handlePlatformEvent(data);
-      });
-
       socketInstance.on("data", (data: any) => {
         switch (data.type) {
-          case "CREDITS":
-            hadleCurrentUserCredits(data?.payload);
+          case Events.CONTROL_CREDITS:
+            dispatch(setUsercredit(data?.payload?.credits == null ? "Infinite" : data?.payload?.credits))
+            break;
+
+          case Events.PLAYGROUND_ENTER:
+            handleEnteredPlatform(data.payload);
+            break;
+
+          case Events.PLAYGROUND_EXIT:
+            handleExitedPlatform(data.payload);
+            break;
+
+          case Events.PLAYGROUND_GAME_ENTER:
+            handleEnteredGame(data.payload);
+            break;
+
+          case Events.PLAYGROUND_GAME_EXIT:
+            console.log("PLAYGROUND GAME XIT : ", data.payload)
+            handleExitedGame(data.payload);
+            break;
+
+          case Events.PLAYGROUND_GAME_SPIN:
+            handleUpdatedSpin(data.payload);
+            break;
+
+          // {
+          //   "username": "test",
+          //   "status": "active",
+          //   "currentCredits": 4787.91,
+          //   "platformId": null,
+          //   "managerName": "agent@RNG",
+          //   "entryTime": "2025-03-20T08:31:45.492Z",
+          //   "exitTime": null,
+          //   "currentRTP": 0,
+          //   "currentGame": null,
+          //   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+          // }
+
+          case Events.PLAYGROUND_ALL:
+            data.payload.forEach((player: any) => {
+              console.log("Plauyer : ", player)
+              dispatch(
+                addPlayer({
+                  playerId: player.playerId,
+                  status: player?.status,
+                  initialCredits: Number(player.initialCredits),
+                  currentCredits: Number(player.currentCredits),
+                  managerName: player.managerName,
+                  entryTime: new Date(player.entryTime),
+                  exitTime: player.exitTime ? new Date(player.exitTime) : null,
+                  currentRTP: player.currentRTP,
+                  currentGame: player.currentGame || {},
+                })
+              );
+            });
             break;
 
           default:
@@ -90,31 +120,6 @@ export const SocketProvider: React.FC<{
     }
   }, [token]);
 
-  const handlePlatformEvent = (data: any) => {
-    switch (data.type) {
-      case EventType.ENTERED_PLATFORM:
-        handleEnteredPlatform(data.payload);
-        break;
-
-      case EventType.EXITED_PLATFORM:
-        handleExitedPlatform(data.payload);
-        break;
-
-      case EventType.ENTERED_GAME:
-        handleEnteredGame(data.payload);
-        break;
-
-      case EventType.UPDATE_SPIN:
-        handleUpdatedSpin(data.payload);
-        break;
-
-      case EventType.EXITED_GAME:
-        handleExitedGame(data.payload);
-        break;
-
-      default:
-    }
-  };
 
   const handleEnteredPlatform = (payload: any) => {
     const {
@@ -197,14 +202,6 @@ export const SocketProvider: React.FC<{
   };
 
 
-  const hadleCurrentUserCredits = (payload: any) => {
-    const { credits, role } = payload;
-    if (role === "admin") {
-      dispatch(setUsercredit('∞'));
-    } else {
-      dispatch(setUsercredit(credits));
-    }
-  };
 
   return (
     <SocketContext.Provider value={{ socket }}>
