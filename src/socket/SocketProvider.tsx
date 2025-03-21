@@ -191,7 +191,7 @@ export const SocketProvider: React.FC<{
   };
 
   const handleUpdatedSpin = (summary: CurrentGame) => {
-    dispatch(updateSpin(summary)); // Use the full payload to ensure all fields are updated
+    dispatch(updateSpin(summary)); // Use the full payload to ensure all fields are updat
   };
 
 
