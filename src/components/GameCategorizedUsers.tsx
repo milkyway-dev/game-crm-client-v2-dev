@@ -9,7 +9,7 @@ import { StatsCard } from "@/components/StatsCard"
 import { TimeDisplay } from "@/components/TimeDisplay"
 import { SessionSpinChart } from "@/components/SessionSpinChart"
 import SpinDataTable from "@/components/SpinDataTable"
-import { type PlayerData, CurrentGame } from "@/utils/Types"
+import { type PlayerData, CurrentGame, Events } from "@/utils/Types"
 
 export default function GameCategorizedUsers() {
     const [viewType, setViewType] = useState("chart")
@@ -56,7 +56,7 @@ export default function GameCategorizedUsers() {
         socket?.emit(
             "data",
             {
-                action: "PLAYER_STATUS",
+                action: Events.PLAYGROUND_EXIT,
                 payload: {
                     playerId: username,
                     status: "inactive",

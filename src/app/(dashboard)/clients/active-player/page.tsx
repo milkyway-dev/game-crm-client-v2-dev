@@ -9,6 +9,7 @@ import { StatsCard } from "@/components/StatsCard";
 import { TimeDisplay } from "@/components/TimeDisplay";
 import { SessionSpinChart } from "@/components/SessionSpinChart";
 import SpinDataTable from "@/components/SpinDataTable";
+import { Events } from "@/utils/Types";
 
 export default function ActiveUsers() {
   const [viewType, setViewType] = useState('chart');
@@ -36,10 +37,9 @@ export default function ActiveUsers() {
     socket?.emit(
       "data",
       {
-        action: "PLAYER_STATUS",
+        action: Events.PLAYGROUND_EXIT,
         payload: {
           playerId: username,
-          status: "inactive",
         },
       },
       (response: { success: boolean; message: string }) => {
@@ -109,7 +109,7 @@ export default function ActiveUsers() {
                   <div className="mt-1 text-sm text-gray-500 tracking-wide dark:text-gray-300">
                     Current Credits :{" "}
                     <span className="text-green-500">
-                      {playerData.currentCredits.toFixed(3)}
+                      {playerData.currentCredits?.toFixed(3)}
                     </span>
                   </div>
                   <div className="mt-1 text-sm text-gray-500 tracking-wide dark:text-gray-300">
