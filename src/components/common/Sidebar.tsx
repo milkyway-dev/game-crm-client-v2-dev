@@ -412,7 +412,7 @@ const Sidebar = () => {
           <div className="h-full flex flex-col justify-between px-3  overflow-y-auto bg-gray-100 dark:bg-[#00000061]">
             <div>
               <div className={`${opensidebar ? 'block' : 'lg:hidden'} flex p-2 justify-between items-center`}>
-                <Image src={'/assets/images/logo.png'} width={400} height={400} quality={100} className="w-[40px] h-[40px]" alt="logo" />
+                <Image src={'/assets/images/logo.webp'} width={400} height={400} quality={100} className="w-[40px] h-[40px]" alt="logo" />
                 <h1 className="text-center font-semibold leading-none text-[1.1rem] lg:text-[1.1rem] text-[#fff] drop-shadow-xl">
                   Panda Power
                 </h1>
