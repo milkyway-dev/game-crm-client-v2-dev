@@ -121,7 +121,7 @@ const Dashboard = ({ subordinates_id, userDetail }: any) => {
 
     return (
         <div className='py-2'>
-            <div className='px-2 h-full bg-gray-100 rounded-xl dark:bg-gray-800'>
+            <div className='px-2 h-full bg-gray-100 rounded-xl dark:bg-[#00000061]'>
                 <div className='flex items-center justify-between'>
                     <span className=' dark:text-white font-semibold text-[1.2rem] capitalize'>{reporttype} Report</span>
                     <div className='pt-2'>
@@ -141,12 +141,12 @@ const Dashboard = ({ subordinates_id, userDetail }: any) => {
                             ></div>
                         )) :
                             card?.map((item, ind) => (
-                                <div key={ind} className='p-4 rounded-lg bg-white dark:bg-gray-700 col-span-6 lg:col-span-4 xl:col-span-3'>
-                                    <div className='flex justify-start space-x-2 items-center'>
+                                <div key={ind} className='p-4 rounded-lg bg-white border border-[#A4C639] dark:bg-[#00000061] col-span-6 lg:col-span-4 xl:col-span-3'>
+                                    <div className='flex justify-start space-x-2  items-center'>
                                         {item?.icon}
                                         <div className='dark:text-white text-md lg:text-xl text-black'>{item?.title}</div>
                                     </div>
-                                    <div className={`text-transparent bg-clip-text bg-gradient-to-tr from-[#8C7CFD] to-[#BC89F1] text-3xl lg:text-5xl pt-4 ${item?.title === 'Date' && 'text-[1.4rem] lg:text-[2rem]'}`}>{item?.amount}</div>
+                                    <div className={`text-transparent bg-clip-text bg-gradient-to-tr from-[#C2D71E] to-[#86CC46] text-3xl lg:text-5xl pt-4 ${item?.title === 'Date' && 'text-[1.4rem] lg:text-[2rem]'}`}>{item?.amount}</div>
                                 </div>
                             ))
                     }
@@ -155,8 +155,8 @@ const Dashboard = ({ subordinates_id, userDetail }: any) => {
 
                 <div className='pt-5 pb-3 grid grid-cols-12 gap-4 h-full'>
                     <RecentTransaction recentTransactions={data?.transactions} />
-                    <div className='col-span-12 lg:col-span-5 p-3 rounded-lg  bg-white dark:bg-gray-700 '>
-                        <p className='text-xl dark:text-white'>Most Played Games</p>
+                    <div className='col-span-12 lg:col-span-5 p-3 rounded-lg  bg-white border-[#A4C639] dark:bg-[#00000061] border'>
+                        <p className='text-xl dark:text-white' >Most Played Games</p>
                     </div>
                 </div>
 
