@@ -44,7 +44,7 @@ const Sidebar = () => {
           Link: "/",
           icon: (
             <svg
-              className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"
+              className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -59,7 +59,7 @@ const Sidebar = () => {
           LinkName: "Clients",
           icon: (
             <svg
-              className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"
+              className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -99,7 +99,7 @@ const Sidebar = () => {
           Link: "",
           icon: (
             <svg
-              className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"
+            className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -129,7 +129,7 @@ const Sidebar = () => {
           Link: "",
           icon: (
             <svg
-              className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"
+            className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -155,16 +155,19 @@ const Sidebar = () => {
         },
         {
           LinkName: "Recharge Record",
+          
           Link: "/transactions/recharge-record",
           icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" /><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" /><path d="m2 16 6 6" /><circle cx="16" cy="9" r="2.9" /><circle cx="6" cy="5" r="3" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"               className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
+            ><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" /><path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" /><path d="m2 16 6 6" /><circle cx="16" cy="9" r="2.9" /><circle cx="6" cy="5" r="3" /></svg>
           ),
         },
         {
           LinkName: "Redeem Record",
           Link: "/transactions/redeem-record",
           icon: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14" /><path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" /><path d="m2 13 6 6" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"               className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
+            ><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14" /><path d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" /><path d="m2 13 6 6" /></svg>
           ),
         },
         {
@@ -172,7 +175,7 @@ const Sidebar = () => {
           Link: "/active-games",
           icon: (
             <svg
-              className="w-9  h-9  transition duration-75 text-[#FFD117] group-hover:text-[#FFD117] group-hover:bg-[#F08D36] rounded-2xl group-hover:bg-opacity-20 p-2"
+            className="w-9  h-9  transition duration-75 text-[#A4C639] group-hover:text-[#68c639] group-hover:bg-[#A4C639] rounded-2xl group-hover:bg-opacity-20 p-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -406,12 +409,12 @@ const Sidebar = () => {
           className={`fixed lg:sticky top-0  ${isSidebar ? 'left-0' : 'left-[-100%]'} w-[60%] lg:w-full z-40 h-screen transition-all  sm:translate-x-0`}
           aria-label="Sidebar"
         >
-          <div className="h-full flex flex-col justify-between px-3  overflow-y-auto bg-gray-100 dark:bg-gray-800">
+          <div className="h-full flex flex-col justify-between px-3  overflow-y-auto bg-gray-100 dark:bg-[#00000061]">
             <div>
               <div className={`${opensidebar ? 'block' : 'lg:hidden'} flex p-2 justify-between items-center`}>
                 <Image src={'/assets/images/logo.png'} width={400} height={400} quality={100} className="w-[40px] h-[40px]" alt="logo" />
                 <h1 className="text-center font-semibold leading-none text-[1.1rem] lg:text-[1.1rem] text-[#fff] drop-shadow-xl">
-                  El Dorado Spin
+                  Panda Power
                 </h1>
                 <div onClick={handelOpenSideBar} className={`pl-4 pt-2  ${!opensidebar ? 'hidden' : 'lg:flex justify-end hidden'} text-white  cursor-pointer`}>
                   <Arrow_Left />
@@ -432,7 +435,7 @@ const Sidebar = () => {
                         className={`flex items-center w-full p-2 text-base ${pathname === item?.Link && 'bg-gray-200 dark:bg-gray-700'} text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700`}
                       >
                         {item?.icon}
-                        <span className={`flex-1 ${pathname === item?.Link && 'text-[#a099d4]'} ${opensidebar ? 'inline-block' : 'lg:hidden'} ms-3 text-left group-hover:text-[#8C7CFD] rtl:text-right whitespace-nowrap`}>
+                        <span className={`flex-1 ${pathname === item?.Link && 'text-[#C2D71E]'} ${opensidebar ? 'inline-block' : 'lg:hidden'} ms-3 text-left group-hover:text-[#C2D71E] rtl:text-right whitespace-nowrap`}>
                           {item?.LinkName}
                         </span>
                         <svg
@@ -463,7 +466,7 @@ const Sidebar = () => {
                         <li key={subind} onClick={() => dispatch(setSidebarshow(false))}>
                           <Link
                             href={subitem?.Link}
-                            className={`flex items-center w-full p-2  ${pathname === subitem?.Link ? 'text-[#a099d4] dark:bg-gray-700 bg-gray-200' : 'text-gray-600 dark:text-white'} dark:hover:text-[#8C7CFD] hover:text-[#8C7CFD] transition duration-75 rounded-lg pl-11  hover:bg-gray-200 dark:hover:bg-gray-700`}
+                            className={`flex items-center w-full p-2  ${pathname === subitem?.Link ? 'text-[#C2D71E] dark:bg-gray-700 bg-gray-200' : 'text-gray-600 dark:text-white'} dark:hover:text-[#C2D71E] hover:text-[#8C7CFD] transition duration-75 rounded-lg pl-11  hover:bg-gray-200 dark:hover:bg-gray-700`}
                           >
                             {subitem?.LinkName}
                           </Link>

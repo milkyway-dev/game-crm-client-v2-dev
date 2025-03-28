@@ -26,7 +26,7 @@ export default async function RootLayout({
     return (
         <StoreProvider>
             <SocketProvider token={token as string}>
-            <div className={`flex flex-1 dark:bg-black bg-white   ${inter.className}`}>
+            <div className={`flex flex-1 dark:bg-[#1f1d1d] bg-white   ${inter.className}`}>
                     <Sidebar />
                 <div className="w-full flex-1">
                     <div className="w-full">

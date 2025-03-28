@@ -4,7 +4,7 @@ import Up from './svg/Up'
 
 const RecentTransaction = ({ recentTransactions }: any) => {
     return (
-        <div className='col-span-12 lg:col-span-7  rounded-lg  bg-white dark:bg-gray-700 '>
+        <div className='col-span-12 lg:col-span-7  rounded-lg  bg-white border-[#A4C639] dark:bg-[#00000061] border '>
             <p className="text-black px-6 tracking-wide text-[1.2rem]  p-3 dark:text-white dark:bg-onDark bg-light_black rounded-3xl inline-block">
                 Recent Transactions
             </p>
@@ -13,7 +13,7 @@ const RecentTransaction = ({ recentTransactions }: any) => {
                 <div className="h-full relative  rounded-3xl">
                     {recentTransactions?.map((item: any, index: any) => (
                         <div key={index}>
-                            <div className="flex  justify-between  bg-gray-100 dark:bg-gray-600 rounded-lg transition-all my-1  dark:border-black pb-3 lg:mx-4 pt-8 px-1 md:px-8">
+                            <div className="flex  justify-between  bg-gray-100 border border-[#a5c6397d] dark:bg-[#131313] rounded-lg transition-all my-1   pb-3 lg:mx-4 pt-8 px-1 md:px-8">
                                 <div className="flex space-x-2   w-full md:space-x-4">
                                     {item?.type === "redeem" ? <Down /> : <Up />}
                                     <div className='w-full'>

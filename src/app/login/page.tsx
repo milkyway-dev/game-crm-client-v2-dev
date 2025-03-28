@@ -54,19 +54,17 @@ const Login = () => {
     return (
         <>
             <div
-                className="bg-[#1a1a1d] bg-cover w-full h-screen flex items-center justify-center relative"
+                className="bg-[#1f1d1d] bg-cover w-full h-screen flex items-center justify-center relative"
             >
-                <div className="relative border-2 border-[#BC89F1] bg-[#8C7CFD] pb-10 bg-clip-padding backdrop-filter backdrop-blur-[5px] bg-opacity-10   w-[90%] md:w-[55%] lg:w-[45%] xl:w-[35%] 2xl:w-[25%]  rounded-[1.8vw] p-2">
+                <div className="relative border-2 border-[#A4C639] bg-[#00000061] pb-10 bg-clip-padding backdrop-filter backdrop-blur-[5px]    w-[90%] md:w-[55%] lg:w-[45%] xl:w-[35%] 2xl:w-[25%]  rounded-[1.8vw] p-2">
                     <div className="w-full h-full">
                         <div className="pt-5">
-                            <div className="mx-auto pb-3 flex justify-center"><Image src={'/assets/images/logo.png'} width={400} height={400} quality={100} className="w-[80px] h-[80px]" alt="logo"/></div>
-                            <h1 className="text-center font-semibold leading-none text-3xl lg:text-4xl text-[#fff] drop-shadow-xl">
-                            El Dorado Spin
-                            </h1>
+                            <div className="mx-auto pb-3 flex justify-center"><Image src={'/assets/images/logo.webp'} width={400} height={400} quality={100} className="w-[220px] h-[160px]" alt="logo"/></div>
+                          
                         </div>
                         <form
                             onSubmit={handleLogin}
-                            className="flex flex-col pt-8 items-center justify-evenly"
+                            className="flex flex-col  items-center justify-evenly"
                         >
 
 
@@ -75,7 +73,7 @@ const Login = () => {
                                     <label htmlFor="username" className="text-xl font-extralight">
                                         Username
                                     </label>
-                                    <div className="flex items-center space-x-3 border-[1px] border-[#8C7CFD] bg-[#dfdfdf37] rounded-md">
+                                    <div className="flex items-center space-x-3 border-[1px] border-[#A4C639] bg-[#1f1d1d] rounded-md">
                                         <input
                                             type="text"
                                             name="username"
@@ -83,7 +81,7 @@ const Login = () => {
                                             value={data.username}
                                             onChange={(e) => handelChange(e)}
                                             autoComplete="new-username"
-                                            className="outline-none w-full text-xl px-3 py-2 placeholder:text-xl font-extralight bg-transparent placeholder:font-extralight placeholder:text-gray-400"
+                                            className="outline-none w-full text-xl px-3 py-2 placeholder:text-xl font-extralight bg-transparent placeholder:font-extralight placeholder:text-[#A4C639]"
                                         />
                                     </div>
                                 </div>
@@ -91,7 +89,7 @@ const Login = () => {
                                     <label htmlFor="password" className="text-xl font-extralight">
                                         Password
                                     </label>
-                                    <div className="flex items-center space-x-3 border-[1px] border-[#8C7CFD] bg-[#dfdfdf37] rounded-md">
+                                    <div className="flex items-center space-x-3 border-[1px] border-[#A4C639] bg-[#1f1d1d] rounded-md">
                                         <input
                                             type={hide ? "text" : "password"}
                                             name="password"
@@ -99,7 +97,7 @@ const Login = () => {
                                             value={data.password}
                                             onChange={(e) => handelChange(e)}
                                             autoComplete="new-password"
-                                            className="outline-none w-full text-xl px-3 py-2 placeholder:text-xl font-extralight bg-transparent placeholder:font-extralight placeholder:text-gray-400"
+                                            className="outline-none w-full text-xl px-3 py-2 placeholder:text-xl font-extralight bg-transparent placeholder:font-extralight placeholder:text-[#A4C639]"
                                         />
                                         {data.password.length > 0 && (
                                             <div className="p-2">
@@ -147,7 +145,7 @@ const Login = () => {
                                 <div className="flex justify-center">
                                     <button
                                         type="submit"
-                                        className="text-center bg-gradient-to-r from-[#8C7CFD] to-[#BC89F1] mx-auto text-white font-semibold text-xl rounded-md py-2 hover:bg-opacity-50  transition-all duration-200 ease-in-out w-full"
+                                        className="text-center border-2 border-[#DFDA0C] bg-gradient-to-r from-[#A4C639] to-[#DFDA0C] mx-auto text-black font-semibold text-xl rounded-md py-2 hover:bg-opacity-50  transition-all duration-200 ease-in-out w-full"
                                     >
                                         LOGIN
                                     </button>

@@ -87,7 +87,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full mx-auto flex bg-gray-100 dark:bg-gray-800 px-5 py-3 justify-between items-center">
+      <div className="w-full mx-auto flex bg-gray-100 dark:bg-[#00000061] px-5 py-3 justify-between items-center">
         <button className="lg:hidden" onClick={() => dispatch(setSidebarshow(true))}>
           <Hamburger />
         </button>
@@ -99,7 +99,7 @@ const Header = () => {
         </div>
         <div className="flex items-center space-x-4">
           <div className="relative pt-2">
-            <button onClick={() => setOpenSetting(!opensetting)} className="dark:text-white dark:hover:text-[#8C7CFD] hover:text-[#8C7CFD] text-gray-600 inline-block" ><Setting /></button>
+            <button onClick={() => setOpenSetting(!opensetting)} className="dark:text-white  hover:text-[#8C7CFD] text-gray-600 inline-block" ><Setting /></button>
             <div className={`${opensetting ? 'scale-100 ' : 'scale-0'} transition-all rounded-xl bg-gray-200  p-2 z-[52] text-base min-w-[200px]  md:right-0 space-y-2 absolute top-[100%] dark:bg-gray-600`}>
               <button onClick={() => handelOpenModal('Add_Platform')} className="w-full py-1.5 dark:hover:bg-gray-500 hover:bg-gray-300 rounded-md dark:text-white">Add Platform</button>
               <button onClick={() => handelOpenModal('Under_Maintenance')} className="w-full py-1.5  dark:hover:bg-gray-500 hover:bg-gray-300 rounded-md dark:text-white">Under Maintenance</button>
@@ -145,7 +145,7 @@ const Header = () => {
           </div>}
           <button
             onClick={handelLogout}
-            className="bg-[#8C7CFD] bg-opacity-40 px-5 py-2 rounded-md hover:scale-95 transition-all hover:bg-opacity-90"
+            className="bg-[#86CC46] bg-opacity-40 px-5 py-2 rounded-md hover:scale-95 transition-all hover:bg-opacity-90"
           >
             <svg
               className="flex-shrink-0 w-5 h-5 rotate-180  transition duration-75 text-gray-800 dark:text-white "

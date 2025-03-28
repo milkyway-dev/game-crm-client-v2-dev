@@ -30,14 +30,14 @@ const Add_Platform = ({ closeModal }: any) => {
                     type="text"
                     placeholder="Add platform"
                     id="password"
-                    className="rounded-md shadow-lg bg-gray-50 border border-gray-300 outline-none  text-gray-900 text-sm focus:ring-blue-500 focus:border-[#FFD117] block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-[#8C7CFD]"
+                    className="rounded-md shadow-lg bg-gray-50 border border-gray-300 outline-none  text-gray-900 text-sm focus:ring-blue-500 focus:border-[#FFD117] block w-full p-2.5 border-[#a5c6397d] dark:bg-[#131313] dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-[#A4C639]"
                     required
                 />
             </div>
             <div className=" flex justify-center mt-2">
                 <button
                     onClick={handeladdPlatform}
-                    className="text-center flex justify-center px-8 items-center gap-2  mx-auto  hover:bg-opacity-65 text-white text-xl rounded-md p-2 font-light bg-gradient-to-r from-[#8C7CFD] t-[#BC89F1]  transition-all duration-200 ease-in-out"
+                    className="text-center flex justify-center px-8 items-center gap-2  mx-auto  hover:bg-opacity-65 text-black text-xl rounded-md p-2 font-light bg-gradient-to-r from-[#A4C639] to-[#DFDA0C]  transition-all duration-200 ease-in-out"
                 >
                     Add
                 </button>
